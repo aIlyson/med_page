@@ -1,0 +1,678 @@
+/* importações */
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Montserrat:wght@200;300&display=swap');
+
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* base styles */
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-top: 3px solid #006633;
+    border-left: 7px solid #006633;
+}
+
+header {
+    width: 100%;
+    min-height: 100vh;
+}
+
+section {
+    padding: 5px 0;
+    overflow: hidden;
+}
+
+footer {
+    width: 100%;
+    max-height: 100vh;
+    padding-top: 120px;
+    color: #fff;
+    /* escolher uma melhor cor depois */
+    background-color: #18533a;
+}
+
+/* typography */
+h1,
+h2 {
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 10px;
+}
+
+.h6 {
+    font-size: 1.450rem;
+    font-weight: 500;
+    font-family: WF Visual Sans, Arial, sans-serif;
+    line-height: 1.3;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.section-title h2::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #006633;
+    bottom: 0;
+    left: calc(50% - 25px);
+}
+
+/* container */
+.container {
+    margin-bottom: 10px;
+}
+
+/* header styles */
+.top {
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(12, 3, 51, 0.3), rgba(12, 3, 51, 0.3));
+    position: relative;
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.background {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 3%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent !important;
+}
+
+.nav-center {
+    background-color: #fff;
+    padding: 5px 3%;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+    color: #ffffff;
+}
+
+.navbar-brand img {
+    width: 50px;
+    opacity: 0.85;
+    transition: transform 0.3s;
+}
+
+.navbar-brand:hover img {
+    transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+    color: #000;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.nav-link i {
+    font-size: 35px;
+    transition: transform 0.3s;
+}
+
+.nav-link:hover i {
+    transform: scale(1.1);
+}
+
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar-nav .nav-item::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: #006633;
+    transition: width 0.3s ease;
+    bottom: 0;
+}
+
+.navbar-nav .nav-item:hover::after {
+    width: 100%;
+}
+
+.nav-item a:active,
+.nav-item a.active {
+    color: #006633;
+}
+
+/* title styles */
+.title_medicine {
+    text-align: center;
+}
+
+.title_medicine h1 {
+    font-size: 150px;
+    color: #fff;
+    font-weight: 600;
+    transition: 0.5;
+}
+
+.title_medicine h1:hover {
+    -webkit-text-stroke: 2px #fff;
+    color: transparent;
+}
+
+.title_medicine a {
+    text-decoration: none;
+    display: inline-block;
+    color: #fff;
+    font-size: 24px;
+    border: 2px solid #fff;
+    padding: 14px 17px;
+    border-radius: 32px;
+    margin-top: 15px;
+    transition: transform 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55), background-position 800ms cubic-bezier(0.68, -0.55, 0.265, 1.55), box-shadow 500ms linear;
+}
+
+.title_medicine a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+.title_medicine a :active {
+    transform: scale(1);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.title_medicine::after {
+    content: '';
+    border-top-left-radius: 80% 100%;
+    border-top-right-radius: 80% 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 10%;
+    background-color: #fff;
+    z-index: 1;
+}
+
+/* video */
+.mp-container {
+    background-color: #fff;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 50px 0px;
+    border-bottom: 5px solid #006633;
+}
+
+.mp-container video {
+    width: 100%;
+    height: 55vh;
+}
+
+/* botão início */
+#btn-back {
+    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #006633;
+    color: #fff;
+    border: none;
+    border-radius: 30%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    margin: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+#btn-back i {
+    font-size: 20px;
+}
+
+/* cursos */
+.courses {
+    padding: 30px 0;
+}
+
+/* card */
+.card {
+    margin-bottom: 30px;
+}
+
+.card-header {
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+}
+
+.card img {
+    height: 200px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-header:hover img {
+    transform: scale(1.1);
+}
+
+/* table */
+.table thead th {
+    font-size: 17px;
+    padding: 20px;
+    border-bottom: solid 1px #333;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.table tbody th,
+.table tbody td {
+    font-size: 16px;
+    border: none;
+    padding: 20px;
+    background: #fff;
+    vertical-align: middle;
+    border-bottom: 2px solid #f8f9fd;
+}
+
+.table tbody th.scope {
+    background: #e8ebf8;
+    border-bottom: 2px solid #e0e5f6;
+}
+
+.table tbody td:nth-child(odd) {
+    background: #f4f6fc;
+    border-bottom: 2px solid #eceffa;
+}
+
+/* modal */
+.modal-form {
+    max-width: 700px;
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.modal-form .title {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.modal-form .title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 30px;
+    border-radius: 5px;
+    background: linear-gradient(135deg, #6a8137, #006633);
+}
+
+/* form */
+.input-box span {
+    margin-bottom: 150px;
+}
+
+.content form .user-details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px 0 12px 0;
+}
+
+form .user-details .input-box {
+    margin-bottom: 15px;
+    width: calc(100% / 2 - 20px);
+}
+
+.user-details .input-box input {
+    height: 45px;
+    width: 100%;
+    outline: none;
+    font-size: 16px;
+    border-radius: 5px;
+    padding-left: 15px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-bottom-width: 2px;
+    transition: all 0.3s ease;
+}
+
+.user-details .input-box input:focus,
+.user-details .input-box input:valid {
+    border-color: #006633;
+}
+
+.details {
+    margin-bottom: 5px;
+}
+
+form .label-details .label-title {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+form .category {
+    display: flex;
+    width: 80%;
+    margin: 14px 0;
+    justify-content: space-between;
+}
+
+form .category label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+form .category label .check {
+    height: 18px;
+    width: 18px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #d9d9d9;
+    border: 5px solid transparent;
+    transition: all 0.3s ease;
+}
+
+#check-1:checked~.category label[for="check-1"] .check,
+#check-2:checked~.category label[for="check-2"] .check,
+#check-3:checked~.category label[for="check-3"] .check {
+    background: #006633;
+    border-color: #6a8137;
+}
+
+form input[type="radio"]:checked+.category label .check {
+    background: #006633;
+    border-color: #6a8137;
+}
+
+form input[type="radio"] {
+    margin-left: 15px;
+}
+
+.form-check {
+    margin-bottom: 10px;
+}
+
+.form-check-label {
+    margin-left: 5px;
+    font-size: 16px;
+    color: #333;
+}
+
+.form-check-input:checked {
+    border-color: #6a8137;
+}
+
+.form-check-input:checked+.form-check-label {
+    color: #6a8137;
+}
+
+.btn-container {
+    margin: 20px;
+}
+
+/* depoimentos */
+.testimonial-card {
+    max-width: 500px;
+    max-height: 700px;
+    margin: 50px 15px 0px 0px;
+    background-color: #fff;
+    margin-bottom: 150px;
+    padding: 40px;
+    text-align: center;
+    align-items: center;
+    border-top: 4px solid #006633;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 0 0 33.3333%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.testimonial-card:nth-child(2) {
+    background-color: #1F9D82;
+    color: #fff;
+    border-top: 4px solid #fcfcfc;
+    transform: translateY(-20px);
+}
+
+.testimonial-card:nth-child(2) .testimonial-text {
+    color: #fff;
+}
+
+.testimonial-card:nth-child(2) h5:before {
+    color: #85fee4;
+}
+
+.testimonial-card h5:before {
+    content: "“";
+    font: normal bold 50px/50px 'Libre Baskerville', sans-serif;
+    color: #757575;
+}
+
+.testimonial-text {
+    display: inline-block;
+    position: relative;
+    color: #9e9e9e;
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    margin-bottom: 25px;
+}
+
+.container-details {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.container-details img {
+    width: 60px;
+    height: 60px;
+    background-color: pink;
+    border: 1px solid #fcfcfc;
+    border-radius: 55px;
+    transition: transform 0.5s ease-in-out;
+}
+
+.container-details span {
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.icon-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+
+.testimonial-author {
+    margin: 0;
+    margin-top: 10px;
+}
+
+/* observador section */
+.about,
+.courses,
+.values,
+.testimonials {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* footer */
+.footer-list_item-link {
+    display: flex;
+    color: #000;
+    align-items: center;
+    font-weight: 400;
+    line-height: 1.5;
+    text-decoration: none;
+    margin-bottom: 1em;
+    transition: color .12s cubic-bezier(.455, .03, .515, .955);
+}
+
+.footer-list_item-link:hover {
+    color: #22b897;
+    transition: color 0.3s ease;
+}
+
+.list_item-link a {
+    color: #fcfcfc;
+    text-decoration: none;
+    text-decoration-thickness: 0.07em !important;
+    text-underline-offset: 0.1em !important;
+}
+
+.footer-column-social {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-list-social {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-list_item-social {
+    margin-right: 1rem;
+}
+
+.footer-list_item-social i {
+    font-size: 25px;
+}
+
+.footer-list_item-social:hover i {
+    color: #22b897;
+    transition: color 0.3s ease;
+}
+
+.footer-logo {
+    width: 100px;
+    height: 100px;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    filter: brightness(100);
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+}
+
+.footer-logo:hover {
+    transform: scale(1.1);
+}
+
+/* media queries */
+@media screen and (max-width: 1130px) {
+    .title_medicine h1 {
+        font-size: 110px;
+    }
+
+    .modal-form {
+        max-width: 100%;
+    }
+
+    form .user-details .input-box {
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+    form .category {
+        width: 100%;
+    }
+
+    .content form .user-details {
+        max-height: 300px;
+        overflow-y: scroll;
+    }
+
+    .user-details::-webkit-scrollbar {
+        width: 5px;
+    }
+
+}
+
+@media screen and (max-width: 769px) {
+    .modal-form .content .category {
+        flex-direction: column;
+    }
+
+    .title_medicine h1 {
+        font-size: 80px;
+    }
+
+    .title_medicine::after {
+        display: none;
+    }
+
+    .testimonial,
+    .testimonial-card {
+        flex-direction: column;
+        margin: 50px;
+    }
+
+    .testimonial-card:nth-child(2) {
+        background-color: initial;
+        border-top: 4px solid #006633;
+    }
+
+    .testimonial-card:nth-child(2) .testimonial-text {
+        color: #9e9e9e;
+    }
+
+    .testimonial-card:nth-child(2) h5:before {
+        color: #757575;
+    }
+}
